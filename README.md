@@ -1,1 +1,2 @@
-# This repository if for the course "Python Practicum"
+# This the repository for the course "Python Practicum"
+## I'll upload my work here
