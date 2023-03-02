@@ -1,18 +1,14 @@
 import json
 
-itemList = []
 dictionary = {}
-with open('wikidata_1000.json', 'r', encoding='utf-8') as f:
-    for jsonObj in f:
-        itemList.append(json.loads(jsonObj))
-
-    for item in itemList:
-        key = item["label"]['value']
-        try:
-            value = item["description"]['value']
-        except:
-            value = 'None'
-        dictionary[key] = value
+for line in open('wikidata_1000.json', 'r', encoding='utf-8'):
+    line = json.loads(line)
+    key = line["label"]['value']
+    try:
+        value = line["description"]['value']
+    except:
+        value = 'None'
+    dictionary[key] = value
 
         
 with open('res1.json', 'w') as j:
