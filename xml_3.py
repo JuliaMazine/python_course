@@ -1,7 +1,6 @@
 import xml.etree.ElementTree as etree
 tree = etree.parse("annot.opcorpora.no_ambig.xml")
 root = tree.getroot()
-list = []
 counter1 = 0
 counter2 = 0
 for token in root.findall('.//token'):
