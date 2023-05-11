@@ -1,5 +1,6 @@
 class Figure:
-    color = 'white'
+    def __init__(self):
+        self.color = "white"
 
     def change_color(self, new_color):
         self.color = new_color
