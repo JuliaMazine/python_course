@@ -6,7 +6,7 @@ from morphologt import Corpus
 class TestCorpus(unittest.TestCase):
     def setUp(self):
         self.corpus = Corpus()
-        self.corpus.load(os.path.join('annot.opcorpora.no_ambig.xml'))
+        self.corpus.load(('annot.opcorpora.no_ambig.xml'))
 
     def test_corpus_len(self):
         self.assertEqual(len(self.corpus), 9798)

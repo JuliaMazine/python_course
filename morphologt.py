@@ -60,9 +60,5 @@ class Corpus:
     def __len__(self):
         return len(self._sentences)
 
-corpus = Corpus()
-corpus.load('annot.opcorpora.no_ambig.xml')
-assert len(corpus) == 9798
-assert len(corpus.get_sentence(0)) == 7
-assert corpus.get_wordform(0, 1).get_grammems() == ['NOUN', 'inan', 'femn', 'sing', 'nomn']
+
 
